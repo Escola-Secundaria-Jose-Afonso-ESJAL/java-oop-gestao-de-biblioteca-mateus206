@@ -3,10 +3,10 @@ name: Java CI
 on:
   push:
     branches:
-      - main  # Atualize aqui para sua branch principal
+      - master  # Atualize aqui para sua branch principal
   pull_request:
     branches:
-      - main  # Atualize aqui para pull requests direcionados à sua branch principal
+      - master  # Atualize aqui para pull requests direcionados à sua branch principal
 
 jobs:
   test:
