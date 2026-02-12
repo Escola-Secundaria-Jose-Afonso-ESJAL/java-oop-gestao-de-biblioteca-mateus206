@@ -1,4 +1,4 @@
-package  com.example;
+package src.main.java.com.example;
 
 import java.util.ArrayList;
 
@@ -18,45 +18,35 @@ public class Biblioteca {
         
         for (Livro l : livros){
             if(l.getTitulo().equals(livro.getTitulo())){
-        
                 System.out.println("o livro foi adicionado");
                 return false;
             }
-            
-            
-            
         }
         
         livros.add(livro);
         return true;
-
     }
         
     public boolean removerLivro(String titulo) {
-         for (Livro l : livros){
-            if(l.getTitulo().equals(livro.getTitulo())){
-        
+        for (Livro l : livros){
+            if(l.getTitulo().equals(titulo)){
                 System.out.println("diz o nome do livro");
-                return false;
+                livros.remove(l);
+                return true;
             }
-            
-            
-            
         }
-
-        
-                
+        return false;
     }
 
     public void listarLivros() {
-        if(l.getTitulo()){
+        if(livros.size() == 0){
             System.out.println("este livro não tá na lista");
-            return false;
+            return;
         }
         for(Livro l : livros){
-        System.out.println(livro.getTitulo() + "-" 
-        + livro.getAutor() + "-" + livro.getAno());
+            System.out.println(l.getTitulo() + "-" + l.getAutor() + "-" 
+                + l.getAno()
+            );
         }
     }
-    
 }
